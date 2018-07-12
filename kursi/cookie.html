@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<TItle>Cookie clicker</TItle>
+<link rel="stylesheet" href="rss/master.css">
+</head>
+<body>
+    <div id="display"></div>
+    <input id="click" type="button" value="click">
+    <input id="multiply" type="button" value="multiply">
+    <input id="autoclick" type="button" value="autoclick">
+    <input id="bonus" type="button" value="bonus">
+    <script type="text/javascript" src="js/cookieclicker.js"></script>
+</body>
+<script>
+var click = document.getElementById('click');
+var display = document.getElementById('display');
+var multiply = document.getElementById('multiply');
+var autoclick = document.getElementById('autoclick');
+var bonus = document.getElementById('bonus');
+
+var multiply = 20;
+var autoclick = 50;
+var bonusCost = 500;
+var score = 0;
+
+var clickValue = 1;
+var multiplier = 1;
+var bonusTime = 5;
+
+var autoclickOn = false;
+var bonusOn = false;
+
+function displayScore(){
+    display.innerHTML = score;
+}
+
+function displayMultiplier(){
+    multiply.value = 'Multiplier x' + multiplier + ' (next: cost ' + multiplierCost + ')';
+}
+
+function displayAutoclick(){
+    autoclick.value = 'Autoclick (cost ' + autoclickCost + ')';
+}
+function displayBonus(){
+    bonus.value = 'Bonus (cost ' + bonusCost + ')';
+}
+function displayBonusTime(){
+    bonus.value = 'Bonus (time: ' + bonusTime + ' sec';
+}
+
+click.addEventListener('click', increaseScore);
+multiply.addEventListener('click', increaseMultiplier);
+autoclick.addEventListener('click', increaseAutoclick);
+bonus.addEventListener('click', enableBonus);
+autoclickInterval = window.setInterval(autoclickF, 1000);
+bonusInterval = window.setInterval(bonusF, 1000);
+</script>
+</html>
