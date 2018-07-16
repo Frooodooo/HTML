@@ -15,11 +15,18 @@
 
     <!-- Custom styles for this template -->
     <link href="css/portfolio-item.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="resources/Style.css">
   </head>
 
   <body>
-
+    <div class="alert alert-dismissible text-center cookiealert" role="alert">      
+      <div class="cookiealert-container">      
+          <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="http://cookiesandyou.com/" target="_blank">Learn more</a>            
+          <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">      
+              I agree   
+          </button>     
+      </div>      
+    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
@@ -38,12 +45,12 @@
               <a class="nav-link" href="Gallery.html">Gallery</a>
             </li>
             <li class="nav-item">
-                    <li class="nav-item active">
-              <a class="nav-link" href="Carousel.html">Carousel</a>
-              <span class="sr-only">(current)</span>
+                    <li>
+              <a class="nav-link" href="Carousel.html">Carousel</a>             
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="Movie.html">Movie</a>
+              <span class="sr-only">(current)</span>
             </li>
           </ul>
         </div>
@@ -51,92 +58,20 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
-
-      <!-- Portfolio Item Heading -->
-      <h1 class="my-4">Movies
-        <small>:)</small>
-      </h1>
-
-      <!-- Portfolio Item Row -->
-      <div class="row">
-
-        <div class="col-md-8">
-          <img class="img-fluid" src="http://placehold.it/750x500" alt="">
-        </div>
-
-        <div class="col-md-4">
-          <h3 class="my-3">Project Description</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-          <h3 class="my-3">Project Details</h3>
-          <ul>
-            <li>Lorem Ipsum</li>
-            <li>Dolor Sit Amet</li>
-            <li>Consectetur</li>
-            <li>Adipiscing Elit</li>
-          </ul>
-        </div>
+    <div class="heading">
+        <h1>Movie Search</h1>
+        <form>
+          <label for="search">Type a movie title</label>
+          <input type="search" name="search" id="search">
+          <input type="submit" value="Search" id="submit">
+        </form>
 
       </div>
-      <!-- /.row -->
 
-      <!-- Related Projects Row -->
-      <h3 class="my-4">Related Projects</h3>
-      <div class="row text-center">
 
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
+    <div id="movieInformation">
+    </div>
     <!-- /.container -->
 
     <!-- Footer -->
@@ -150,7 +85,8 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="resources/cookie.js"></script>
+    <script src="resources/movie.js"></script>
   </body>
 
 </html>
