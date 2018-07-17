@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>MovieInfo</title>
+  <link rel="stylesheet" href="resources/stylemovie.css">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/portfolio-item.css" rel="stylesheet">
+  <!-- Latest jQuery Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Bootstrap Core JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- Cookie JS for Modal -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
+  <link rel="stylesheet" href="resources/Style.css">
+</head>
+
+<body>
+
+        <div class="alert alert-dismissible text-center cookiealert" role="alert">      
+                <div class="cookiealert-container">      
+                    <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="http://cookiesandyou.com/" target="_blank">Learn more</a>            
+                    <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">      
+                        I agree   
+                    </button>     
+                </div>      
+              </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="Movie.html">Movie Info</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home
+                  
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Carousel.html">Carousel</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="Movie.html">Movie</a>
+                <span class="sr-only">(current)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+
+  <div class="container">
+    <div id="movie" class="well"></div>
+  </div>
+  <!-- /.container -->
+  <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; Test Website 2018</p>
+        </div>
+        <!-- /.container -->
+      </footer>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="resources/movie.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="resources/cookie.js"></script>
+  <script>
+  getMovie();
+  </script>
+</html>

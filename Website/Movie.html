@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-  <head>
+<head>
+  <meta charset="utf-8">
+  <title>MovieInfo</title>
+  
+  <link rel="stylesheet" href="resources/stylemovie.css">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/portfolio-item.css" rel="stylesheet">
+  <!-- Latest jQuery Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Bootstrap Core JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- Cookie JS for Modal -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
+  <link rel="stylesheet" href="resources/Style.css">
+</head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<body>
 
-    <title>Hello</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/portfolio-item.css" rel="stylesheet">
-    <link rel="stylesheet" href="resources/Style.css">
-  </head>
-
-  <body>
     <div class="alert alert-dismissible text-center cookiealert" role="alert">      
-      <div class="cookiealert-container">      
-          <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="http://cookiesandyou.com/" target="_blank">Learn more</a>            
-          <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">      
-              I agree   
-          </button>     
-      </div>      
-    </div>
-    <!-- Navigation -->
+        <div class="cookiealert-container">      
+            <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="http://cookiesandyou.com/" target="_blank">Learn more</a>            
+            <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">      
+                I agree   
+            </button>     
+        </div>      
+      </div>
+
+  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Home</a>
+        <a class="navbar-brand" href="Movie.html">Movie Info</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            
+            <li class="nav-item">
               <a class="nav-link" href="index.html">Home
                 
               </a>
@@ -45,8 +48,7 @@
               <a class="nav-link" href="Gallery.html">Gallery</a>
             </li>
             <li class="nav-item">
-                    <li>
-              <a class="nav-link" href="Carousel.html">Carousel</a>             
+              <a class="nav-link" href="Carousel.html">Carousel</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="Movie.html">Movie</a>
@@ -56,37 +58,33 @@
         </div>
       </div>
     </nav>
-
-    <!-- Page Content -->
-    <div class="heading">
-        <h1>Movie Search</h1>
-        <form>
-          <label for="search">Type a movie title</label>
-          <input type="search" name="search" id="search">
-          <input type="submit" value="Search" id="submit">
-        </form>
-
-      </div>
-
-
-
-    <div id="movieInformation">
+  <div class="container">
+    <div class="jumbotron">
+      <h3 class="text-center">Search for any movies </h3>
+      <form id="searchForm">
+        <input type="text" class="form-control" id="searchText" placeholder="Search Movies...">
+      </form>
     </div>
-    <!-- /.container -->
+  </div>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
+  <div class="container">
+    <div id="movies" class="row"></div>
+  </div>
+  <!-- /.container -->
+  <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Test Website 2018</p>
       </div>
       <!-- /.container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="resources/movie.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="resources/cookie.js"></script>
-    <script src="resources/movie.js"></script>
-  </body>
-
 </html>
